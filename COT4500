@@ -1,0 +1,47 @@
+//NUMERICAL CALCULUS
+//CODE CREATED FOR HOMEWORK ASSIGNMENT
+//PURPOSE: SEARCH FOR LAST NAME IN A LIST
+
+#include<stdio.h>
+#include<string.h>
+#include <stdlib.h>
+
+int main(){
+    int N, index, x;
+        
+//GET USER INPUT FOR REPEAT COUNT
+    printf("Enter p0");
+    scanf("%d", &N);
+
+
+ //CREATE ARRAY
+    char firstname[30];
+    char othernames[30];
+
+
+    //FIRST NAME SCAN IN
+    scanf("%s", &firstname[0]);
+
+
+//CREATE LOOP FOR STORING NAMES INTO ARRAY
+    int match=0;
+
+    for (index=0; index<N-1; index++)    {
+       scanf("%s", &othernames[index]);
+            //CHECK FOR REPEATS OF THE FIRST NAME
+            if (firstname[0]==othernames[index])
+                match=1;
+            else
+                match=0;
+        }
+
+//PRINT THE RESULTS
+    if (match==1)
+        printf("First name repeated.\n");
+    else
+        printf("First name is not repeated.\n");
+
+system("pause");
+return 0;
+
+}
